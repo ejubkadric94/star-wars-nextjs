@@ -1,4 +1,5 @@
 import { Character } from "@/typescript/types";
+import Films from "./films";
 
 type Props = {
     character: Character;
@@ -7,7 +8,8 @@ type Props = {
 function Character({ character }: Props) {
     return (
         <li>
-            <span>{character.name}</span>
+            <div>{character.name}</div>
+            <Films filmsUrls={character.films} />
         </li>
     );
 };
